@@ -18,36 +18,42 @@
 
         <form class="shadow w-450" action="php/signup.php" method="post">
             <h4 class="text-center">Create Account</h4><br>
-            <?php if(isset($_GET['error'])){ ?>
-            <div class="alert alert-danger" role="alert">
-                <?php echo $_GET['error'];?>
-                
-            </div>
+            <?php if (isset($_GET['error'])) { ?>
+                <div class="alert alert-danger" role="alert">
+                    <?php echo $_GET['error']; ?>
+                </div>
+            <?php } ?>
+
+
+            <?php if (isset($_GET['success'])) { ?>
+                <div class="alert alert-success" role="alert">
+                    <?php echo $_GET['success']; ?>
+
+                </div>
             <?php } ?>
             <div class="mb-3">
                 <label class="form-label">Full name</label>
-                <input type="text" class="form-control" name="fname" value="<?php echo (isset($_GET['fname']))? $_GET['fname']:"" ?>">
+                <input type="text" class="form-control" name="fname" value="<?php echo (isset($_GET['fname'])) ? $_GET['fname'] : "" ?>">
             </div>
 
 
 
             <div class="mb-3">
                 <label class="form-label" name="uname">User name</label>
-                <input type="text" class="form-control" name="uname" value="<?php echo (isset($_GET['uname']))?$_GET['uname']:"" ?>">
+                <input type="text" class="form-control" name="uname" value="<?php echo (isset($_GET['uname'])) ? $_GET['uname'] : "" ?>">
             </div>
 
 
 
             <div class="mb-3">
                 <label class="form-label" name="pass">Password</label>
-                <input type="text" class="form-control" name="pass" value="<?php echo (isset($_GET['pass']))?$_GET['pass']:"" ?>">
+                <input type="text" class="form-control" name="pass" value="<?php echo (isset($_GET['pass'])) ? $_GET['pass'] : "" ?>">
             </div>
             <button type="submit" class="btn btn-primary">Envoyer</button>
             <a href="login.php">Login</a>
 
 
         </form>
-
     </div>
 </body>
 

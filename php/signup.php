@@ -21,5 +21,8 @@ if (empty($fname)) {
     $sql = "INSERT INTO user (fname,username,password) VALUES (?,?,?)";
     $stmt = $conn->prepare($sql);
     $stmt->execute([$fname, $uname, $pass]);
-    echo "vous etes enregistrées avec succéss mouad";
+    header("location:../index.php?success=Your account has succesfully created");
+    exit;
+    
+    
 }
