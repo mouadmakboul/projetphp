@@ -18,6 +18,9 @@ if (empty($fname)) {
     header("Location:../index.php?error=$em&$data");
     exit;
 } else {
+    //hashing the password
+    // on declare un variable on le passe au parametre notre password recuperer au debut et password default
+    $pass=password_hash($pass,PASSWORD_DEFAULT);
     $sql = "INSERT INTO user (fname,username,password) VALUES (?,?,?)";
     $stmt = $conn->prepare($sql);
     $stmt->execute([$fname, $uname, $pass]);

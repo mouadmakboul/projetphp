@@ -16,27 +16,8 @@
 
     <div class="d-flex justify-content-center align-items-center vh-100">
 
-        <form class="shadow w-450" action="php/signup.php" method="post">
-            <h4 class="text-center">Create Account</h4><br>
-            <?php if (isset($_GET['error'])) { ?>
-                <div class="alert alert-danger" role="alert">
-                    <?php echo $_GET['error']; ?>
-                </div>
-            <?php } ?>
-
-
-            <?php if (isset($_GET['success'])) { ?>
-                <div class="alert alert-success" role="alert">
-                    <?php echo $_GET['success']; ?>
-
-                </div>
-            <?php } ?>
-            <div class="mb-3">
-                <label class="form-label">Full name</label>
-                <input type="text" class="form-control" name="fname" value="<?php echo (isset($_GET['fname'])) ? $_GET['fname'] : "" ?>">
-            </div>
-
-
+        <form class="shadow w-450" action="php/login.php" method="post">
+            <h4 class="text-center">Login</h4><br>
 
             <div class="mb-3">
                 <label class="form-label" name="uname">User name</label>
@@ -49,8 +30,8 @@
                 <label class="form-label" name="pass">Password</label>
                 <input type="text" class="form-control" name="pass" value="<?php echo (isset($_GET['pass'])) ? $_GET['pass'] : "" ?>">
             </div>
-            <button type="submit" class="btn btn-primary">Envoyer</button>
-            <a href="login.php" class="link-secondary">Login</a>
+            <button type="submit" class="btn btn-primary">Login</button>
+            <a href="index.php" class="link-secondary">Sign up</a>
 
 
         </form>
