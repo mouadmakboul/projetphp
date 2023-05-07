@@ -6,6 +6,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['fname'])) {
 ?>
     <!DOCTYPE html>
     <html lang="en">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 
     <head>
         <meta charset="UTF-8">
@@ -24,9 +25,10 @@ if (isset($_SESSION['id']) && isset($_SESSION['fname'])) {
 
 
             <h4 class="text-center display-4">Welcome mouad to ur application <?= $_SESSION['fname'] ?></h4>
+            <a href="logout.php" class="btn btn-warning vh-300 justify-content-center align-items-center">Logout here</a>
             
         </div>
-        <a href="logout.php" class="btn btn-warning vh-300">Logout</a>
+        
     </body>
 
     </html>
