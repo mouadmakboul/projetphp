@@ -21,5 +21,5 @@ if (empty($fname)) {
     $sql = "INSERT INTO user (fname,username,password) VALUES (?,?,?)";
     $stmt = $conn->prepare($sql);
     $stmt->execute([$fname, $uname, $pass]);
-    echo "vous etes enregistrées avec succés";
+    echo "vous etes enregistrées avec succéss mouad";
 }
